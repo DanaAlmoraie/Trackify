@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trackify">
         <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+
+        <!-- شاشة تسجيل الدخول Sign In / Login -->
+        <activity
+            android:name=".SignIn"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
