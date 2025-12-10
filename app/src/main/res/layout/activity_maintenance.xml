@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D2D2D">
+
+    <!-- CONTAINER FOR BOXES WITH PADDING -->
+    <LinearLayout
+        android:id="@+id/boxesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:orientation="vertical">
+
+        <!-- TOP ROW -->
+        <LinearLayout
+            android:id="@+id/topRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <!-- BOX 1 -->
+            <LinearLayout
+                android:id="@+id/box1"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/box_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_speed"
+                        app:tint="#E85002" />
+
+                    <TextView
+                        android:id="@+id/title_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="Speed"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/value_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="0 km/h"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"/>
+            </LinearLayout>
+
+            <!-- BOX 2 -->
+            <LinearLayout
+                android:id="@+id/box2"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/box_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_distance"
+                        app:tint="#E85002" />
+
+                    <TextView
+                        android:id="@+id/title_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="Distance"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/value_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="0 km"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- BIG MAINTENANCE BOX -->
+        <LinearLayout
+            android:id="@+id/bigBox"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/box_background"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#E85002" />
+
+                <TextView
+                    android:id="@+id/title_maintenance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="Maintenance"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/value_maintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="-- days"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <!-- BOTTOM ROW -->
+        <LinearLayout
+            android:id="@+id/bottomRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- OIL -->
+            <LinearLayout
+                android:id="@+id/box_oil"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp"
+                android:padding="14dp"
+                android:background="@drawable/box_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_oil"
+                        app:tint="#E85002" />
+
+                    <TextView
+                        android:id="@+id/title_oil"
+                        android:layout_marginLeft="6dp"
+                        android:text="Oil"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/value_oil"
+                    android:layout_marginTop="6dp"
+                    android:text="-- km"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- TIRES -->
+            <LinearLayout
+                android:id="@+id/box_tires"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:background="@drawable/box_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_tire"
+                        app:tint="#E85002" />
+
+                    <TextView
+                        android:id="@+id/title_tires"
+                        android:layout_marginLeft="6dp"
+                        android:text="Tires"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/value_tires"
+                    android:layout_marginTop="6dp"
+                    android:text="-- km"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- BRAKES -->
+            <LinearLayout
+                android:id="@+id/box_brakes"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:background="@drawable/box_background">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_brake"
+                        app:tint="#E85002" />
+
+                    <TextView
+                        android:id="@+id/title_brake"
+                        android:layout_marginLeft="6dp"
+                        android:text="Brakes"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/value_brake"
+                    android:layout_marginTop="6dp"
+                    android:text="-- km"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- TRUCK IMAGE WITHOUT PADDING -->
+    <ImageView
+        android:id="@+id/truck"
+        android:layout_width="910dp"
+        android:layout_height="610dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-100dp"
+        android:layout_marginLeft="-80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/truck2"/>
+</RelativeLayout>
