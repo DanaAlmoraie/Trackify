@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="vertical"
+    android:background="#1C1C1E"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Engine Oil"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/itemRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1500 km remaining"
+        android:textColor="#E85D02"
+        android:textSize="15sp"
+        android:layout_marginTop="4dp"/>
+
+    <ProgressBar
+        android:id="@+id/itemProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:progress="60"
+        android:max="100"
+        android:progressTint="#E85D02"
+        android:backgroundTint="#333333"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
