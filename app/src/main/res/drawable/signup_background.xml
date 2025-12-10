@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+
+        <!-- خلفية داكنة (ممكن تغيري الألوان على حسب الباليت اللي عندك) -->
+        <gradient
+            android:startColor="#111217"
+            android:endColor="#1B1C21"
+            android:angle="90" />
+    </shape>
+
+
+
+
