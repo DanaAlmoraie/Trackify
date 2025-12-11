@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="20dp">
+
+
+    <!-- Transparent AppBar -->
+    <LinearLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/transparent">
+
+        <!-- Logo on left -->
+
+        <!-- Login Button on right -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="95dp"
+            android:layout_height="132dp"
+            android:contentDescription="App Logo"
+            android:layout_marginLeft="-20dp"
+            android:src="@drawable/ic_truck_logo" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnLoginTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_marginRight="-10dp"/>
+    </LinearLayout>
+
+
+    <!-- Card container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#AA222222"
+        android:layout_below="@id/appBar"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:orientation="vertical">
+
+            <!-- PICKUP FIELD -->
+            <TextView
+                android:text="Pickup (Your Location)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_pin"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    app:tint="#FF7A00" />
+
+                <TextView
+                    android:id="@+id/tvStartPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading your location..."
+                    android:textColor="#EEEEEE"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginVertical="18dp"
+                android:background="#55FFFFFF" />
+
+            <!-- DROP FIELD -->
+            <TextView
+                android:text="Drop-off"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_location"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="#FF7A00" />
+
+                <EditText
+                    android:id="@+id/etDrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter destination..."
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#BBBBBB"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"
+                    android:padding="6dp"/>
+            </LinearLayout>
+
+            <!-- start navigation button -->
+            <Button
+                android:id="@+id/btnStart"
+                android:text="Start Navigation"
+                android:layout_marginTop="20dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF7A00"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Maintenance Box -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMaintenance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardContainer"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#AA222222">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/imgMaintenance"
+                android:layout_width="238dp"
+                android:layout_height="205dp"
+                android:layout_marginTop="-25dp"
+                android:contentDescription="Maintenance Icon"
+                android:scaleType="centerCrop"
+                android:src="@drawable/truck3" />
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/btnMaintenance"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Maintenance Dashboard"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:backgroundTint="#FF7A00"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

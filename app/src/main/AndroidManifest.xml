@@ -16,7 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trackify">
 
-        <!-- Maintenance Screen (Your UI) -->
+        <!-- Home Screen  -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- Maintenance Screen  -->
         <activity
             android:name=".MaintenanceActivity"
             android:exported="false" />

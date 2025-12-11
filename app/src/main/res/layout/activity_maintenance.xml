@@ -12,6 +12,19 @@
         android:layout_height="wrap_content"
         android:padding="18dp"
         android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/btnBackM"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circle_dark"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:tint="@android:color/white"
+            app:layout_constraintTop_toTopOf="@id/topBar"
+            app:layout_constraintBottom_toBottomOf="@id/topBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp" />
 
         <!-- TOP ROW -->
         <LinearLayout
@@ -291,11 +304,11 @@
     <!-- TRUCK IMAGE WITHOUT PADDING -->
     <ImageView
         android:id="@+id/truck"
-        android:layout_width="910dp"
-        android:layout_height="610dp"
+        android:layout_width="wrap_content"
+        android:layout_height="570dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-100dp"
         android:layout_marginLeft="-80dp"
+        android:layout_marginBottom="-125dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/truck2"/>
+        android:src="@drawable/truck2" />
 </RelativeLayout>
