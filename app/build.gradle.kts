@@ -52,6 +52,7 @@ dependencies {
 
     // Google Sign-In (مهم لزر Google)
     implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation(libs.material)
 
     // ========== Test ==========
     testImplementation("junit:junit:4.13.2")
